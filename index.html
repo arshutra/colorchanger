@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@700&family=Fuzzy+Bubbles:wght@700&family=Poppins:wght@300&family=Rubik+Gemstones&display=swap');
+     
+     *{
+        margin: 0;padding: 0;
+     }
+
+     nav{
+        height: 4rem;
+        background: #f4f4f4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    }
+    h2{
+        color: rgb(0, 132, 255);
+        font-size: 30px;
+        font-family: 'Fuzzy Bubbles', cursive;
+    }
+    h1{
+        background: #0f0f0f;
+        height: 3rem; width: 40rem;
+        font-family: 'Fuzzy Bubbles', cursive;
+        border: 13px solid #0f0f0f;border-radius: 10px;
+        color: whitesmoke;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+    
+    #container{
+        display: flex;
+        align-items: center;justify-content: center;flex-direction: column;gap: 30px;
+        height: 650px;
+     }
+
+     button{
+        border: 2px solid black;
+        padding: 10px;background: transparent;width: 200px;
+        font-size: 18px;font-family: 'Fuzzy Bubbles', cursive;
+        border-radius: 20px;
+     }
+     button:hover{
+        background-color: #0f0f0f;
+        color: whitesmoke;
+        transition: 1s;
+     }
+</style>
+<body>
+    <nav>
+        <h2>SIMPLE COLOR CHANGER</h2>
+    </nav>
+    <div id="container">
+
+        <h1 class="back_ground">BACKGROUND COLOR: </h1>
+        <button id="btn">Click Me</button>
+    </div>
+    
+    <script>
+
+        let btn=document.getElementById("btn")
+        let container=document.getElementById("container")
+let index=0
+        
+        btn.addEventListener("click",function(){
+            let colors=["red","blue","green","yellow","pink","white","purple"]
+            
+
+             let random_color=Math.floor(Math.random()*colors.length)
+
+            document.getElementById("container").style.background=colors[random_color]
+             
+
+        
+        })
+
+
+    </script>
+</body>
+</html>
